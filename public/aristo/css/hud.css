@@ -1,0 +1,78 @@
+a, h1, h2, h3, h4, blockquote
+{
+	-webkit-user-select: none;
+}
+
+.hud {
+  color: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4D4D4D), color-stop(0.3, #000000), color-stop(0.3, #000000), to(#000000));
+  border: 1px solid #060606;
+  -webkit-border-radius: 3px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.hud footer {
+  display: block;
+  border: none;
+  background: none;
+  padding: 3px 10px 8px;
+  margin-top: 14px;
+}
+
+.hud .border {
+  border: 1px solid #4F4F4F;
+  -webkit-border-radius: 3px;
+}
+
+.hud .inner {
+  margin: 8px 15px;
+  position: relative;
+}
+
+.hud button {
+  font-size: 11px;
+  color: #fff;
+  -webkit-border-image: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(#474747), to(#000000));
+  border: 1px solid #000;
+  -webkit-box-shadow: 0 0 2px #fff;
+  -webkit-border-radius: 10px;
+  padding: 0px 16px;
+  text-shadow: 0px 1px 1px #1D1D1D;
+  min-width: 31px;
+  min-height: 20px;
+  line-height: 20px;
+}
+
+.hud button:hover {
+  -webkit-box-shadow: 0 0 3px #fff;
+}
+
+.hud button:active {
+  -webkit-border-image: none;
+  background: -webkit-gradient(linear, left bottom, left top, from(#474747), to(#000000));
+}
+
+.hud h2 {
+  font-size: 14px;
+  margin: 11px 0px 17px;
+}
+
+.hud p.input {
+  margin: 7px 0px;
+}
+
+.title {
+  text-shadow: 0px 1px 2px #1D1D1D;
+  color: #EFEFEF;
+  font-size: 11px;
+  text-align: center;
+  margin: 3px;
+}
+
+/* Titanium specific */
+
+.hud:-khtml-drag {
+  visibility: hidden;
+}

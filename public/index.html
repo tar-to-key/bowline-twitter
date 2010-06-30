@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Twitter</title>
+	<link rel="stylesheet" href="aristo/css/aristo.css" type="text/css" charset="utf-8">
+  <link rel="stylesheet" href="stylesheets/application.css" type="text/css" charset="utf-8">
+	<script src="javascripts/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="javascripts/jquery.chain.js" type="text/javascript" charset="utf-8"></script>
+	<script src="javascripts/json2.js" type="text/javascript" charset="utf-8"></script>
+  <script src="javascripts/bowline.js" type="text/javascript" charset="utf-8"></script>
+  <script src="javascripts/application.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8">    
+    jQuery(function($){
+      Bowline.trace = true;
+
+      var tweets = $('#tweets');
+      tweets.bowlineBind('TweetsBinder');
+
+      $('#updateSubmit').click(function(){
+        tweets.invoke('update', $('#updateText').val());
+        $('#updateText').val('');
+        return false;
+      });
+
+      $('#updateRefresh').click(function(){
+        tweets.invoke('refresh');
+        return false;
+      });
+    });
+  </script>
+</head>
+  <body>
+    <div class="main">
+      <div id="tweets">
+        <div class="item">
+          <img class="profile_image_url">
+          <span class="text"></span>&nbsp;
+          <span class="created_at"></span>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <button id="updateRefresh">refresh</button>
+      <input placeholder="What are you doing?" type="text" id="updateText">
+      <button id="updateSubmit">Update</button>
+    </footer>
+</body>
+</html>
